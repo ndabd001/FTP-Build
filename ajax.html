@@ -1,0 +1,42 @@
+#Andrew helped me with this assignment
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajax</title>
+  </head>
+  <body>
+    <div id="florida">
+      <h2>Florida's Cities</h2>
+      <button id="FL">Florida</button>
+      <div id="floridaCities"></div>
+    </div>
+    <div id="georgia">
+      <h2>Georgia's Cities</h2>
+      <button id="GA">Georgia</button>
+      <div id="georgiaCities"></div>
+    </div>
+    <div id="alabama">
+      <h2>Alabama's Cities</h2>
+      <button id="AL">Alabama</button>
+      <div id="alabamaCities"></div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function()
+      {
+        $("#FL").click(function()
+        {
+          $("#floridaCities").load("florida.txt");
+        });
+        $("#GA").click(function()
+        {
+          $("#georgiaCities").load("georgia.txt");
+        });
+        $("#AL").click(function()
+        {
+           $("#alabamaCities").load("alabama.txt");
+        });
+      });
+    </script>
+  </body>
+</html>
